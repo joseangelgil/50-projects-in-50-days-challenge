@@ -10,7 +10,7 @@
 <body>
   <div class="container">
     <h1>Unit Converter</h1>
-    <select id="type-dropdown" onChange="imprime()">
+    <select id="type-dropdown" onChange="createOptions()">
       <option value="">Please choose a type of unit to convert</option>
       <option value="mass">Mass</option>
       <option value="volume">Volume</option>
@@ -19,21 +19,21 @@
       <option value="speed">Speed</option>
     </select>
     <div class="input-field">
-      <input id="input" type="number" onChange="convert()">
+      <input id="input" type="number" min="0">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
       </svg>      
       <span id="output"></span>
     </div>
     <div class="units-box">
-      <select id="input-btn" class="unit-btn" onChange="convert()">
+      <select id="input-btn" class="unit-btn">
       </select>
       <button id="change-btn">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
         </svg>
       </button>
-      <select id="output-btn" class="unit-btn" onChange="convert()">
+      <select id="output-btn" class="unit-btn">
       </select>
     </div>
 
