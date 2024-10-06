@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Countdown Timer</title>
+  </head>
+  <body>
+    <div class="container">
+      <input id="hours" type="number" min="0" max="23" value="00" oninput="calculateMilliseconds()">
+      <span class="separator">:</span>
+      <input id="minutes" type="number" min="0" max="59" value="00" oninput="calculateMilliseconds()"> 
+      <span class="separator">:</span>
+      <input id="seconds" type="number" min="0" max="59" value="00" oninput="calculateMilliseconds()">
+    </div>
+    <div class="btn-container">
+      <button id="play-pause-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke-width="1.5" stroke="white" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+        </svg>        
+      </button>
+      <button id="stop-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke-width="1.5" stroke="white" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+        </svg>        
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
