@@ -1,0 +1,48 @@
+.App {
+  width: 500px;
+  height: 600px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+  border: 1.5px solid orange;
+  box-shadow:0 0 200px 50px #6ecaff
+}
+
+h1 {
+  margin: 20px auto;
+  color: orange;
+}
+
+h1 i {
+  padding: 0 25px; 
+}
+
+.ratings {
+  width: 100%;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.new-rating {
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: grey;
+  font-family: inherit;
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  border: none;
+  background-color: rgba(255, 166, 0, 0.151);
+  outline: none;
+  border-radius: 20px;
+}
+
+.new-rating:hover {
+  background-color: orange;
+  color: white;
+}
