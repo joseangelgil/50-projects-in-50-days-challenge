@@ -15,8 +15,7 @@ body {
   align-items: center;
   justify-content: center;
   background-image: url(./img/zen-landscape.jpg);
-  background-color: rgba(255,255,255,0.1);
-  background-blend-mode: color;
+  backdrop-filter: grayscale(100%);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -25,9 +24,9 @@ body {
   width: 90%;
   max-width: 600px;
   height: 200px;
-  box-shadow: 0 1px 3px 1px rgb(88, 18, 18);;
+  box-shadow: 0 1px 3px 1px grey;
   border-radius: 35px;
-  background-color: rgb(248, 214, 179);
+  background-color: rgba(255,255,255,0.7);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,7 +36,7 @@ body {
 }
 p, span {
   font-size: 1.2rem;
-  color:rgb(88, 18, 18);
+  color: rgb(70, 70, 70);
 }
 
 i {
@@ -68,7 +67,7 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
-  color: rgb(88, 18, 18);
+  color: rgb(70, 70, 70);
 }
 
 button:hover {
