@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 50px;
+}
+
+#hm-btn {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#hm-btn span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: black;
+  top: 8.5px;
+  transition: all 0.3s linear 0.3s;
+}
+
+#hm-btn span::before {   
+  position:absolute;
+  content: "";
+  width: 30px;
+  height: 3px;
+  top: -8.5px;
+  background: black;
+  transition: all 0.3s linear 0.3s;
+}
+
+#hm-btn span::after {  
+  position:absolute;
+  content: "";
+  width: 30px;
+  height: 3px;
+  background: rgb(0,0,71);
+  top: 8.5px;
+  transition: all 0.3s linear 0.3s;
+}
+
+#hm-btn.active span {
+  background: transparent;
+  transform: rotate(720deg);
+}
+
+#hm-btn.active span::before {  
+  transform: rotate(43deg) translate(5px, 8.5px); 
+}
+
+#hm-btn.active span::after {  
+  transform: rotate(-45deg) translate(3px, -7px); 
+}
+
+
+.tab {
+  /* width: 100px; */
+  width: 0;
+  opacity: 0;
+  height: 50px;
+  margin-top: 1px;
+  background-color: rgb(0,0,71);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  transition: all 0.3s linear;
+}
+
+.tab p {
+  opacity: 0;
+  transition: all 0.3s linear 0.1s;
+}
+
+.tab.open {
+  width: 200px;
+  opacity: 1;  
+  cursor: pointer;
+}
+
+.tab.open p {
+  opacity: 1;
+}
+
+
+
+
+
+
