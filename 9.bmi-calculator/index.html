@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles.css">
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="calculator-container">
+        <h2>Calculate your BMI</h2>
+        <form>
+          <div class="inpt">            
+            <label for="age">Age</label>
+            <input id="age" type="number" min="20" max="100">
+          </div>
+          <div class="inpt">
+            <label for="height">Height</label>
+            <input id="height" type="number" min="0" max="250" placeholder="cm">
+          </div>
+          <div class="inpt">
+            <label for="weight">Weight</label>          
+            <input id="weight" type="number" min="0" max="300" placeholder="kg">
+          </div>
+          <div class="form-btns">
+            <button id="calculate">Calculate</button>
+            <button id="clear">Clear</button>
+          </div>
+        </form>
+      </div>
+      <div class="result-container">
+        <h3>BMI: <span id="bmi-number">0</span>kg/m<sup style="font-size: 0.6em">2</sup></h3>
+        <h4 id="bmi-status"></h4>
+        <div class="graph">
+          <div id='arrow' class="arrow"></div>
+        </div>        
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
