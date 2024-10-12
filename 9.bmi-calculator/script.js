@@ -8,6 +8,8 @@ const bmiStatus = document.getElementById('bmi-status');
 const arrowEl = document.getElementById('arrow');
 
 let timeInterval;
+let intervalRunning = false;
+let lastMedition = Number(bmiNumber.innerText);
 
 calculateBtn.addEventListener('click', (e) => {
   e.preventDefault();
@@ -17,14 +19,19 @@ calculateBtn.addEventListener('click', (e) => {
     return
   }
 
+  if(intervalRunning) return;
+
   let bmi = parseFloat(weightEl.value) / (parseFloat(heightEl.value)/100)**2;
+
+  let animationTime = 2000 / (Math.abs(bmi - lastMedition) * 10);
+
   let statusText;
   let statusColor;
 
   if(bmi < 18.5) {
     statusText = 'Underweight';
     statusColor = 'orange';
-  } else if(bmi < 26) {
+  } else if(bmi < 25) {
     statusText = 'Healthy';
     statusColor = 'green';
   } else if(bmi < 30) {
@@ -40,28 +47,35 @@ calculateBtn.addEventListener('click', (e) => {
 
   let deg = (180 - (bmi*180/60)) < 0 ? 1 : (180 - (bmi*180/60));
   arrowEl.style.transform = `rotate(-${deg}deg)`;
-  
-  let dynamicText = 0;
 
   timeInterval = setInterval(() => {
-    if(dynamicText < bmi) {        
-      dynamicText += 0.1;    
-      bmiNumber.innerText = dynamicText.toFixed(1);
-    } else {   
+    if(Math.abs(lastMedition - bmi) < 0.05) {  
+      intervalRunning = false; 
       bmiStatus.innerText = statusText;
       bmiStatus.style.color = statusColor;   
       clearInterval(timeInterval)
-    }
-  }, 7)
+    } else if(lastMedition < bmi) {  
+      intervalRunning = true;      
+      lastMedition += 0.1;    
+      bmiNumber.innerText = lastMedition.toFixed(1);
+    } else if(lastMedition > bmi) {
+      intervalRunning = true;              
+      lastMedition -= 0.1;    
+      bmiNumber.innerText = lastMedition.toFixed(1);
+    } 
+  }, animationTime)
   
 })
 
 clearBtn.addEventListener('click', (e) => {
   e.preventDefault()
   clearInterval(timeInterval)
+  intervalRunning = false;
+  lastMedition = 0;
   bmiStatus.innerText = '';
   arrowEl.style.transform = 'rotate(-180deg)';
   bmiNumber.innerText = '0'
   heightEl.value = '';
   weightEl.value = '';
+  ageEl.value = '';
 })
