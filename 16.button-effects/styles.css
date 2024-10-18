@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background: linear-gradient(to top, grey, white);
+}
+
+h1 {
+  background: linear-gradient(to right, purple, orange);
+  background-clip: text;
+  color: transparent;
+}
+
+button {
+  width: 100px;
+  aspect-ratio: 1/1;
+  margin: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#button1 {
+  background-color: rgba(75, 250, 100, 0.5);
+}
+
+#button1:hover {
+  background-color: rgba(75, 250, 100, 1);
+}
+
+#button2 {
+  background-color: rgba(255, 0, 242, 0.5);
+}
+
+#button2:active {
+  transform: scale(0.9)
+}
+
+#button3 {
+  background: linear-gradient(90deg, orangered, white, orangered);
+  background-size: 200%;
+  animation: moving-gradient 10s infinite;
+}
+
+#button4 {
+  background-color: white; 
+  position: relative; 
+}
+
+#button4 i {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#button4:hover i {
+  animation: arrow-down infinite 2s linear;
+}
+
+
+@keyframes moving-gradient {
+  0% {
+    background-position: 0%;
+  }
+  25% {
+    background-position: 100%;
+  }
+  50% {
+    background-position: 0%;
+  }
+  75% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+@keyframes arrow-down {
+  0% {
+    transform: scale(0.9) translateX(-50%);
+  }
+
+  50% {
+    transform: scale(1.2) translateX(-50%) translateY(5px);
+  }
+
+  100% {
+    transform: scale(0.9) translateX(-50%);
+  }
+}
+
+
+@media (max-width: 500px) {
+  button {
+    width: 75px;
+    margin: 5px;
+    font-size: 0.5rem;
+  }
+}
+
+
