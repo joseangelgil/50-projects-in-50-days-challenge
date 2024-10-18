@@ -9,7 +9,7 @@ let timer;
 
 const notifications = {
   info: {
-    text: 'New wahtsapp message!',
+    text: 'New whatsapp message!',
     color: 'rgba(0, 255, 255, 0.3)'
   },
   error: {
