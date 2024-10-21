@@ -69,15 +69,17 @@ button {
   padding: 8px 15px;
   cursor: pointer;
   border-radius: 7px;
+  font-weight: bold;
   border: none;
   outline: none;
+  background-color: rgb(165, 165, 165);
   box-shadow: 0 0 3px 0 rgba(0,0,0,0.7);  
   border: 1px solid black;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 button:active {
   transform: scale(0.9);
-  background-color: #ddd;
+  opacity: 0.9;
   box-shadow: none;
 }
