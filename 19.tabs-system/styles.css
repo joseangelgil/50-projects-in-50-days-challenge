@@ -59,7 +59,7 @@ body {
   height: 30px;
   background: transparent;
   border-bottom-right-radius: 20px;
-  box-shadow: 10px 10px 0 0 var(--color);
+  box-shadow: 10px 10px 0 0 var(--color, blue);
   z-index: 1;
 }
 
@@ -72,7 +72,7 @@ body {
   height: 30px;
   background: transparent;
   border-bottom-left-radius: 20px;
-  box-shadow: -10px 10px 0 0 var(--color);
+  box-shadow: -10px 10px 0 0 var(--color, blue);
   z-index: 1;
 }
 
