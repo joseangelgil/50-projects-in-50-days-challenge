@@ -7,7 +7,62 @@
     <title>Profile Card Creator Form</title>
   </head>
   <body>
-    
+    <div class="cards-container">
+      <div class="profile-card">
+        <img src="https://picsum.photos/id/100/300" alt="profile">
+        <hr>
+        <h3>Name</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo id, mollitia reiciendis beatae fugiat sed?</p>
+      </div>
+      <div class="profile-card">
+        <img src="https://picsum.photos/id/120/300" alt="profile">
+        <hr>
+        <h3>Name</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo id, mollitia reicie</p>
+      </div>
+      <div class="profile-card">
+        <img src="https://picsum.photos/id/140/300" alt="profile">
+        <hr>
+        <h3>Name</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo id, mollitia reiciendis beatae fugiat sed?</p>
+      </div>
+      <div class="profile-card">
+        <img src="https://picsum.photos/id/15/300" alt="profile">
+        <hr>
+        <h3>Name</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo id, mollitia reiciendis beatae fugiat sed?</p>
+      </div>
+      <div class="profile-card">
+        <img src="https://picsum.photos/id/155/300" alt="profile">
+        <hr>
+        <h3>Name</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo id, mollitia reiciendis beatae fugiat sed?</p>
+      </div>
+      <div class="new-profile-card">      
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" width="100" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>      
+        <p>New User</p>
+      </div>
+      <div class="lightbox">
+        <form action="#">
+          <h1>New User Form</h1>
+          <label for="user-img">User Image: 
+            <input id="user-img" type="text" placeholder="img URL">
+          </label>        
+          <label for="user-name">User Name: 
+            <input type="text" id="user-name" maxlength="20">
+          </label>        
+          <label for="user-description">User Description: 
+            <input id="user-description" type="text" placeholder="max 100 char.">
+          </label>   
+          <div class="buttons">
+            <button type="button" id="confirm-btn">Confirm</button>     
+            <button type="button" id="cancel-btn">Cancel</button>  
+          </div>   
+        </form>
+      </div>
+    </div>    
     <script src="script.js"></script>
   </body>
 </html>
