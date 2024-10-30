@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Guess The Number</title>
+</head>
+<body>
+  <h1>Guess The Number</h1>
+  <h2>I am thinking about a number between 0 and 9 both included. Who can guess it first?</h2>
+  <div class="box-container">
+    <h1 id="question-mark">?</h1>
+    <h1 id="number-to-guess">1</h1>
+  </div>  
+  <div class="options-container">
+    <div class="option active">0</div>
+    <div class="option active">1</div>
+    <div class="option active">2</div>
+    <div class="option active">3</div>
+    <div class="option active">4</div>
+    <div class="option active">5</div>
+    <div class="option active">6</div>
+    <div class="option active">7</div>
+    <div class="option active">8</div>
+    <div class="option active">9</div>
+  </div>
+  <div class="result-container">    
+    <h2 id="result"></h2> 
+    <button id="replay" type="button">Replay</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
