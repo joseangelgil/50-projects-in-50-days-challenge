@@ -29,6 +29,14 @@ body {
   font-size: 5rem;
 }
 
+#question-mark {
+  opacity: 1;
+}
+
+#number-to-guess {
+  opacity: 0;
+}
+
 .options-container {
   display: flex;
   gap: 20px;
