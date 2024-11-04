@@ -7,10 +7,100 @@
 body {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
 }
 
+.items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(201px, 1fr));
+  gap: 50px;
+  justify-items: center;
+  align-content: center;
+  padding: 40px;
+  padding-top: 100px;
+}
+
+.item {
+  width: 200px;
+  height: 300px;
+  box-shadow: 0 1px 3px 2px rgba(0,0,0,0.7);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: grey;
+  cursor: pointer;
+}
+
+.cart div {
+  width: 100%;
+  color: black;
+  font-size: 18px;
+  position: absolute;
+  top: 7px;
+  left: 3px;
+  text-align: center;
+}
+
+.shopping-list {
+  display: none;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.shopping-list-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  max-width: 300px;
+  width: 80%;
+  background-color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.shopping-list-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.shopping-list-content > p {
+  font-weight: bold;
+}
+
+.shopping-list-items p {
+  margin: 10px
+}
+
+button {
+  padding: 5px 15px;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(0,0,0,0.3);
+}

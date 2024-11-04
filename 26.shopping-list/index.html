@@ -8,7 +8,34 @@
   <title>Shopping List</title>
 </head>
 <body>
-  
+  <div class="items">
+    <div class="item">cyan</div>
+    <div class="item">red</div>
+    <div class="item">green</div>
+    <div class="item">yellow</div>
+    <div class="item">pink</div>
+    <div class="item">orangered</div>
+    <div class="item">grey</div>
+  </div>
+  <div class="shopping-cart">    
+    <i id="cart" class="fa-solid fa-cart-shopping cart fa-3x">
+      <div id="list-number"></div>
+    </i>
+  </div>
+  <div class="shopping-list">
+    <div class="shopping-list-container">
+      <div class="shopping-list-content">
+        <p>List of items on cart:</p>
+        <div class="shopping-list-items">
+        </div>
+        <p>Total of items: <span id="total-items">0</span></p>
+      </div>
+      <div class="shopping-list-buttons">
+        <button id="cancel">cancel</button>
+        <button id="clear">clear cart</button>
+      </div>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
